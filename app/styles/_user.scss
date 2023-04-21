@@ -1,0 +1,30 @@
+.telaUser {
+    padding: 20px;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        a {
+            margin-bottom: 30px;
+            text-decoration: none;
+            color: black;
+            background-color: aqua;
+            padding: 10px;
+            border-radius: 10px;
+
+            &:hover {
+                background-color: rgb(0, 195, 255);
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,11 @@
+{{yield}}
+<section class="telaLogin">
+    <h2>Faça <span {{action 'login'}}>login</span> ou <span {{action 'cadastro'}}>cadastre-se</span></h2>
+    {{#if this.isLogin}}
+    <Login />
+    <p>Nao possui login? Faça seu cadastro <span {{action 'cadastro'}}>aqui</span></p>
+    {{else}}
+    <Cadastro />
+    <p>Ja possui cadastro? Faça seu login <span {{action 'login'}}>aqui</span></p>
+    {{/if}}
+</section>

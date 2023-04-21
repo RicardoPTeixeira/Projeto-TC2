@@ -1,0 +1,67 @@
+.telaLogin {
+    text-align: center;
+    padding: 20px;
+
+    h2 {
+        margin-bottom: 20px;
+        span {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    p {
+        span {
+            text-decoration: underline;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .loginForm, .cadastroForm {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+
+            &:last-of-type {
+                margin-bottom: 20px;
+            }
+
+            label {
+                margin-bottom: 5px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            input {
+                border: 1px solid #000;
+                width: 50%;
+                height: 25px;
+                border-radius: 10px;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+
+        button {
+            width: 50%;
+            height: 25px;
+            margin: 0 auto;
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(15, 147, 255);
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(15, 119, 255);
+            }
+        }
+    }
+}
