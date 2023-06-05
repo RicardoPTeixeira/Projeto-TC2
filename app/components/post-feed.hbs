@@ -1,14 +1,15 @@
 {{yield}}
 <div class="postFeed">
     <div class="headerPost">
-        <h3>Titulo do post</h3>
+        <h3>{{@post_title}}</h3>
+        
         <div>
-            <h4>Autor</h4>
+            <h4>{{@post_author}}</h4>
             <p>dd/mm/aaaa</p>
         </div>
     </div>
     <div class="contentPost">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sit provident tempora, quisquam doloribus numquam, magni maxime, et ipsum error eveniet. Itaque inventore rem optio! Culpa laboriosam sapiente saepe recusandae.</p>
+        <p>{{@post_text}}</p>
     </div>
     
 </div>

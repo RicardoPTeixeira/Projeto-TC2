@@ -1,8 +1,8 @@
 {{yield}}
 <section class="telaFeed">
-    <h2>Feed de posts</h2>
+    <h2 {{action 'findAllPosts'}}>Feed de posts</h2>
     {{!-- Repeater com todos os posts --}}
-    <PostFeed />
-    <PostFeed />
-    <PostFeed />
+    <PostFeed @post_title="Titulo 1" @post_author="Autor 1" @post_text="1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sit provident tempora, quisquam doloribus numquam, magni maxime, et ipsum error eveniet. Itaque inventore rem optio! Culpa laboriosam sapiente saepe recusandae." />
+    <PostFeed @post_title="Titulo 2" @post_author="Autor 2" @post_text="2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sit provident tempora, quisquam doloribus numquam, magni maxime, et ipsum error eveniet. Itaque inventore rem optio! Culpa laboriosam sapiente saepe recusandae." />
+    <PostFeed @post_title="Titulo 3" @post_author="Autor 3" @post_text="3 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sit provident tempora, quisquam doloribus numquam, magni maxime, et ipsum error eveniet. Itaque inventore rem optio! Culpa laboriosam sapiente saepe recusandae." />
 </section>
