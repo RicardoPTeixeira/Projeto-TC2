@@ -5,17 +5,73 @@
     justify-content: center;
     padding: 20px;
 
-    h2 {
-        margin-bottom: 10px;
+    h2, h3 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .newPost {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin-bottom: 50px;
+
+        .inputDiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 15px;
+
+            &:last-of-type {
+                margin-bottom: 20px;
+            }
+
+            label {
+                margin-bottom: 10px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            input, select {
+                border: 1px solid;
+                border-radius: 10px;
+                width: 50%;
+                height: 25px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            textarea {
+                width: 50%;
+                border-radius: 10px;
+            }
+        }
+
+        button {
+            width: 50%;
+            height: 25px;
+            margin: 0 auto;
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(15, 147, 255);
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(15, 119, 255);
+            }
+        }
     }
 
     .postFeed {
+        width: 80%;
         padding: 20px 0 15px;
         border-bottom: 1px solid;
 
         .headerPost {
             margin-bottom: 15px;
             h3 {
+                font-size: 25px;
                 margin-bottom: 5px;
             }
 

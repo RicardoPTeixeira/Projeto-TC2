@@ -1,8 +1,25 @@
 {{yield}}
 <section class="telaFeed">
-    <h2 {{action 'findAllPosts'}}>Feed de posts</h2>
-    {{!-- Repeater com todos os posts --}}
-    <PostFeed @post_title="Titulo 1" @post_author="Autor 1" @post_text="1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sit provident tempora, quisquam doloribus numquam, magni maxime, et ipsum error eveniet. Itaque inventore rem optio! Culpa laboriosam sapiente saepe recusandae." />
-    <PostFeed @post_title="Titulo 2" @post_author="Autor 2" @post_text="2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sit provident tempora, quisquam doloribus numquam, magni maxime, et ipsum error eveniet. Itaque inventore rem optio! Culpa laboriosam sapiente saepe recusandae." />
-    <PostFeed @post_title="Titulo 3" @post_author="Autor 3" @post_text="3 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sit provident tempora, quisquam doloribus numquam, magni maxime, et ipsum error eveniet. Itaque inventore rem optio! Culpa laboriosam sapiente saepe recusandae." />
+    <h2>Adicione um novo post!</h2>
+    <form action="" id="postForm" class="newPost">
+        <div class="inputDiv">
+            <label for="tituloPost">Titulo do post</label>
+            <input type="text" name="tituloPost" id="tituloPost" required placeholder="Titulo">
+        </div>
+        <div class="inputDiv">
+            <label for="autorPost">Autor do post</label>
+            <input type="text" name="autorPost" id="autorPost" placeholder="Autor" required>
+        </div>
+        <div class="inputDiv">
+            <label for="textPost">Post</label>
+            <textarea name="textPost" id="textPost" rows="7" maxlength="600" placeholder="Escreva seu post aqui..." required></textarea>
+        </div>
+        {{!-- <button type="submit">Publicar</button> --}}
+        <button type="submit" {{action 'novo_post'}}>Publicar</button>
+    </form>
+
+    <h2>Feed de posts</h2>
+    {{#each this.posts key="id" as |post|}}
+        <PostFeed @post_title={{post.titulo}} @post_author={{post.autor}} @post_text={{post.texto}} @post_date={{post.data}} />
+    {{/each}}
 </section>
